@@ -17,7 +17,8 @@ rl.question('How many storeys do you want to make your tree?', (answer) =>
     rl.close();
 });
 
-var generation = function(answer, coloredFloor = 1) {
+var generation = function(answer, coloredFloor = 1) 
+{
     const baseHeightFloor = 4;
     var character = "*";
     var result = new Array();
@@ -35,7 +36,8 @@ var generation = function(answer, coloredFloor = 1) {
                 continue;
             }
             else 
-            if (result.length%4 === 0) {
+            if (result.length%4 === 0) 
+            {
                 lastLength = lastLength - 2;
                 if (coloredFloor === baseFloor) result.push(character.repeat(lastLength)["rainbow"]);
                 else result.push(character.repeat(lastLength));
